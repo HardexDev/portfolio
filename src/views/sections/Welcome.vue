@@ -12,7 +12,7 @@
             </typewriter> 
           </div>
       </div>
-      <img src="/assets/down-chevron.png" alt="">
+      <img src="/assets/down-chevron.png" @click="scrollTo('#presentation')" alt="">
   </div>
 </template>
 
@@ -27,12 +27,17 @@ export default {
             {from: "ALEXIS ROBIN", to: "CS STUDENT"},
             {from: "CS STUDENT", to: "ALEXIS ROBIN"}
         ]
-    })
+    }),
+    methods: {
+        scrollTo(element: string) {
+            document.querySelector(element)?.scrollIntoView({behavior: "smooth"});
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-    $green: #15C58D;
+    @use "../../styles/variables";
 
     .Welcome {
         height: 100vh;
@@ -55,6 +60,7 @@ export default {
         .main-bg {
             height: 100vh;
             background-image: url("/assets/workspace.jpg");
+            background-repeat: no-repeat;
             background-size: 100%;
             display: flex;
             align-items: center;
@@ -69,13 +75,13 @@ export default {
 
             .title {
                 width: 100%;
-                z-index: 700;
+                z-index: 1;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
 
                 h1 {
-                    color: $green;
+                    color: variables.$green;
                     font-weight: 100;
                     font-size: 100px;
                 }
