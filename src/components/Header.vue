@@ -1,7 +1,14 @@
 <template>
   <div class="Header" v-bind:class="{change_color: scrollPosition > 50}">
-    <img src="/assets/logo.png" alt="">
-    <h1>ALEXIS | CS STUDENT</h1>
+    <div class="left">
+      <a href="" @click="(e) => {e.preventDefault(); scrollTo('#welcome')}"><img src="/assets/logo.png" alt=""></a>
+      <h1>ALEXIS | CS STUDENT</h1>
+    </div>
+    <div class="links">
+      <a href="" @click="(e) => {e.preventDefault(); scrollTo('#presentation')}">Presentation</a>
+      <a href="" @click="(e) => {e.preventDefault(); scrollTo('#projects')}">Projects</a>
+    </div>
+    
   </div>
 </template>
 
@@ -22,8 +29,13 @@ export default {
       scrollPosition.value = window.scrollY;
     }
 
+    const scrollTo = (element: string) => {
+      document.querySelector(element)?.scrollIntoView({behavior: "smooth"});
+    }
+
     return {
-      scrollPosition
+      scrollPosition,
+      scrollTo
     }
   }
 
@@ -34,7 +46,7 @@ export default {
     @use "../styles/variables";
 
     .Header {
-        height: 7vh;
+        min-height: 7vh;
         background-color: transparent;
         position: absolute;
         position: fixed;
@@ -42,7 +54,32 @@ export default {
         z-index: 2;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         transition: all .2s ease;
+
+        .left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 50px;
+
+          @media(max-width: 400px) {
+            margin-right: 5px;
+          }
+
+          a {
+            color: #FFF;
+            margin-right: 25px;
+            text-decoration: none;
+          }
+        }
+
 
         &.change_color {
           background-color: variables.$main_background_color;
@@ -51,6 +88,10 @@ export default {
         img {
           width: 60px;
           margin-left: 20px;
+
+          @media(max-width: 400px) {
+              width: 40px;
+          }
         }
 
         h1 {
@@ -60,6 +101,10 @@ export default {
           font-weight: 100;
           letter-spacing: 2px;
           font-size: 20px;
+          
+          @media(max-width: 700px) {
+            display: none;
+          }
         }
     }
 </style>

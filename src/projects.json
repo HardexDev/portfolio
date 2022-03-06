@@ -1,0 +1,162 @@
+[
+    [
+        {
+            "title": "Kanagawa",
+            "imageUrl": "kanagawa.jpg",
+            "summary": "Project done in context of UTBM AP4B (OOP programming class). The goal was to re-create the board game Kanagawa (see the rules <a href='https://cdn.1j1ju.com/medias/7d/9c/d0-kanagawa-rulebook.pdf' target='_blank'>here</a>) but adapting it to how the UTBM works (UV system etc...), with a GUI interface.",
+            "language": "Java",
+            "frameworks": "JavaFX",
+            "software": "Intellij, SceneBuilder, Visual Paradigm (for conception), GitHub",
+            "team": "4 students",
+            "year": "2021",
+            "githubLink": "https://github.com/HardexDev/Kanagawa"
+        },
+        {
+            "title": "Submarine Simulation",
+            "imageUrl": "submarine.png",
+            "summary": "Project done in context of UTBM AP4A (OOP programming class). The goal was to simulate data sensors in a submarine (Temperature, humidity, light, pressure). The data had to be retreived at specific time intervals for each sensors (usage of threads)",
+            "language": "C++",
+            "frameworks": "No Framework",
+            "software": "Eclipse, GitHub",
+            "team": "Solo project",
+            "year": "2021",
+            "githubLink": ""
+        },
+        {
+            "title": "MedCare App",
+            "imageUrl": "medical.png",
+            "summary": "Project done for my last semester at the Institute of Technology of Dijon. This mobile app allows you to manage your medical appointments, for patients and professionals. You have a calendar with your next appointments, a list of your doctors/patients as well as a list of your personal medical documents.",
+            "language": "JavaScript, Dart",
+            "frameworks": "NodeJS (Express, for backend server), Flutter, MongoDB",
+            "software": "Visual Studio Code, Android Studio (for virtual device)",
+            "team": "3 students",
+            "year": "2021",
+            "githubLink": ""
+        },
+        {
+            "title": "Crypto RSA",
+            "imageUrl": "cryptographie.png",
+            "summary": "Project done for my cryptography class at the Institute of Technology of Dijon. The final goal was to implement the RSA algorithm through a game developed by our professor",
+            "language": "Java",
+            "frameworks": "No framework",
+            "software": "IntellijIDEA, GitHub",
+            "team": "3 students",
+            "year": "2021",
+            "githubLink": "https://github.com/HardexDev/CryptoRSA"
+        },
+        {
+            "title": "Crypto Star Wars",
+            "imageUrl": "light-saber.png",
+            "summary": "Project done for my cryptography class at the Institute of Technology of Dijon. The goal of this project was to solve cryptography problems through a game in the Star Wars theme, developed by our professor",
+            "language": "Java",
+            "frameworks": "No framework",
+            "software": "IntellijIDEA, GitHub",
+            "team": "3 students",
+            "year": "2021",
+            "githubLink": "https://github.com/HardexDev/CryptoStarWars"
+        },
+        {
+            "title": "Menu Generator",
+            "imageUrl": "menu.png",
+            "summary": "Tutored project of my third semester at the Institute of Technology of Dijon. The goal of this project was to create a random menu generator web app. In order to do this, we had sample data in our database like aliments, dishes, desserts, fruits etc... The menu of the week was randomly generated according to the current season and the parameters of the user (disliked aliments and more). We had several meetings with our professor, who played the role of the client.",
+            "language": "PHP",
+            "frameworks": "Symfony, MySQL, Bootstrap (for UI)",
+            "software": "Visual Studio Code, MySQL Workbench, GitHub",
+            "team": "5 students",
+            "year": "2020",
+            "githubLink": "https://github.com/HardexDev/MenuGenerator"
+        },
+        {
+            "title": "Project Management Software",
+            "imageUrl": "team.png",
+            "summary": "Tutored project of my second semester at the Institute of Technology of Dijon. The goal of this project was to create a web app where workers could see which projects they were assigned to, as well as the details about each project. The worker could change the project status do 'finished' when the project was completed. Two of our professors played the role of the clients, we had several meetings with them.",
+            "language": "PHP",
+            "frameworks": "MySQL, Bootstrap (for UI)",
+            "software": "Visual Studio Code, MySQL Workbench, GitHub",
+            "team": "5 students",
+            "year": "2020",
+            "githubLink": ""
+        },
+        {
+            "title": "IUT Dijon's website",
+            "imageUrl": "iut.png",
+            "summary": "Tutored project of my first semester at the Institute of Technology of Dijon. The goal was to create a website presenting the Institute of Technology to new students",
+            "language": "Wordpress",
+            "frameworks": "Elementor",
+            "software": "No specific software used",
+            "team": "3 students",
+            "year": "2019",
+            "githubLink": ""
+        },
+        {
+            "title": "SkyIUT",
+            "imageUrl": "skyrim.jpg",
+            "summary": "Project done in context of Algorithm class at Institute of Technology of Dijon, the goal was to create a console game, with a story in the universe of Skyrim. The player could make choices to finally fight the final boss.",
+            "language": "Pascal",
+            "frameworks": "No framework",
+            "software": "Lazarus (Pascal IDE)",
+            "team": "3 students",
+            "year": "2019",
+            "githubLink": ""
+        }
+    ],
+    [
+        {
+            "title": "Portfolio",
+            "imageUrl": "logo.png",
+            "summary": "The portfolio you are looking at right now !",
+            "language": "JavaScript",
+            "frameworks": "VueJS, Sass",
+            "software": "Visual Studio Code, GitHub",
+            "team": "Solo project",
+            "year": "2022",
+            "githubLink": "https://github.com/HardexDev/portfolio"
+        },
+        {
+            "title": "Movie Club",
+            "imageUrl": "movie-club.png",
+            "summary": "Personal project done on my spare time to learn React. Web app that allows to to search for movies with a nice UI. Users can also add movies to their favorites and see details about a specific movie. All the data comes from the TMDB public api. The app was deployed on Heroku at <a href='https://movie-club-app.herokuapp.com/' target='_blank'>this adress.</a>",
+            "language": "JavaScript",
+            "frameworks": "React, Sass",
+            "software": "Visual Studio Code, GitHub",
+            "team": "Solo project",
+            "year": "2022",
+            "githubLink": "https://github.com/HardexDev/Movies-App"
+        },
+        {
+            "title": "The Intern",
+            "imageUrl": "intern.png",
+            "summary": "Project done in the context of UTBM intersemester's Game Jam. We had one week to create a video-game on the theme : Every Death is Meaningful. Our game is a point and click, you play a soul reaper who must choose between killing someone or keeping him alive. To make his choice, the player will have to retreive information about each person, thanks to their souls. The game was ranked 4 out of 11 participants. You can download the game <a href='' target='_blank'>here</a>.",
+            "language": "Unity (C#)",
+            "frameworks": "No Framework",
+            "software": "Unity, Visual Studio, GitHub",
+            "team": "2 students",
+            "year": "2022",
+            "githubLink": "https://github.com/HardexDev/EveryDeathCount"
+        },
+        {
+            "title": "Todo App",
+            "imageUrl": "checklist.png",
+            "summary": "Small project to learn the Django framework. This is a classic todo-app where the user can : Create, Update or Delete todos. All the data is stored in a database (sqlite)",
+            "language": "Python",
+            "frameworks": "Django",
+            "software": "Visual Studio Code, SQLite, GitHub",
+            "team": "Solo project",
+            "year": "2021",
+            "githubLink": "https://github.com/HardexDev/TODO-APP"
+        }
+    ],
+    [
+        {
+            "title": "WCS Software",
+            "imageUrl": "warehouse.png",
+            "summary": "I did my second year internship in a company which main activity is logistics. They create products to help automating warehouses. I worked in an engineering team for three months to develop a new Warehouse Control System (WCS), which is basically a software which controls all the different machines in a warehouse and tries to optimize the products flows. I learned a lot technically, but also about team-working in a tech company.",
+            "language": "Java",
+            "frameworks": "Maven, MongoDB, Redis, Neo4j, Docker, Git",
+            "software": "Intellij, Jira, Bitbucket, LucidChart (for diagrams), Slack",
+            "team": "About 15 engineers",
+            "year": "2021",
+            "githubLink": ""
+        }
+    ]
+]

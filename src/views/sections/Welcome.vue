@@ -1,5 +1,5 @@
 <template>
-  <div class="Welcome">
+  <div class="Welcome" id="welcome">
       <Header />
       <div class="main-bg">
           <div class="title">
@@ -51,6 +51,11 @@ export default {
             top: 70%;
             left: 50%;
 
+            @media(max-width: 1100px) {
+                width: 30px;
+                left: 48%;
+            }
+
             
             &:hover {
                 animation: bump 1s linear infinite;
@@ -59,9 +64,12 @@ export default {
 
         .main-bg {
             height: 100vh;
+            width: 100%;
+            height: 100%;
             background-image: url("/assets/workspace.jpg");
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
 
@@ -84,6 +92,14 @@ export default {
                     color: variables.$green;
                     font-weight: 100;
                     font-size: 100px;
+
+                    @media(max-width: 1100px) {
+                        font-size: 50px;
+                    }
+
+                    @media(max-width: 400px) {
+                        font-size: 40px;
+                    }
                 }
             }
         }

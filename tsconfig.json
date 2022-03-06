@@ -13,6 +13,7 @@
     "baseUrl": ".",
     "noImplicitAny": false,
     "allowJs": true,
+    "resolveJsonModule": true,
     "types": [
       "webpack-env"
     ],
