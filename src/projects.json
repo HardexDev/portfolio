@@ -1,6 +1,39 @@
 [
     [
         {
+            "title": "Fluz",
+            "imageUrl": "fluz.png",
+            "summary": "Mobile application developed for SY43 UV at UTBM (android course). The goal was to create a \"zero budget app\" that is to say that total expenses must be equal to total income. Very nice project to develop Android skills. Agile project management was used.",
+            "language": "Android Kotlin",
+            "frameworks": "MVVM design pattern, ROOM database",
+            "software": "Android Studio, Astah (for conception), GitHub",
+            "team": "2 students",
+            "year": "2022",
+            "githubLink": "https://github.com/gxfab/SY43_P2022/tree/Fluz"
+        },
+        {
+            "title": "Parking Simulation",
+            "imageUrl": "parking.png",
+            "summary": "Project developed for my SY40 class (Operating Systems). The goal was to develop a program that simulates the behaviour of a parking (entrance and exit handling, time handling etc...) but using low level tools (threads, signals, semaphores, mutex, IPC objects etc...). This was really great to learn more about system and low level programming.",
+            "language": "C",
+            "frameworks": "No Framework",
+            "software": "Visual Studio Code, GitHub",
+            "team": "2 students",
+            "year": "2022",
+            "githubLink": "https://github.com/HardexDev/Parking"
+        },
+        {
+            "title": "Routing Optimisation",
+            "imageUrl": "sessad.png",
+            "summary": "Project developed for my IT45 class (Operational Research). The goal was to develop an algorithm to solve a routing problem with several constraints. We decided to implement a genetic algorithm, it turned out well and gives really satisfying results, close from optimal one.",
+            "language": "Java",
+            "frameworks": "No Framework",
+            "software": "Intellij, GitHub",
+            "team": "2 students",
+            "year": "2022",
+            "githubLink": "https://github.com/HardexDev/Projet-IT45"
+        },
+        {
             "title": "Kanagawa",
             "imageUrl": "kanagawa.jpg",
             "summary": "Project done in context of UTBM AP4B (OOP programming class). The goal was to re-create the board game Kanagawa (see the rules <a href='https://cdn.1j1ju.com/medias/7d/9c/d0-kanagawa-rulebook.pdf' target='_blank'>here</a>) but adapting it to how the UTBM works (UV system etc...), with a GUI interface.",
