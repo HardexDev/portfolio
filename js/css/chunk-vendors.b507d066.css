@@ -1,0 +1,1 @@
+@-webkit-keyframes blink{0%,to{opacity:0}50%{opacity:1}}@keyframes blink{0%,to{opacity:0}50%{opacity:1}}.content :last-child:after{font-size:calc(1em + 2px);content:"|";-webkit-animation:blink .75s step-end infinite;animation:blink .75s step-end infinite}
