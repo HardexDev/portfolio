@@ -1,46 +1,32 @@
-<template>
-  <div class="Header" v-bind:class="{change_color: scrollPosition > 50}">
-    <div class="left">
-      <a href="" @click="(e) => {e.preventDefault(); scrollTo('#welcome')}"><img src="/assets/logo.png" alt=""></a>
-      <h1>ALEXIS | CS STUDENT</h1>
-    </div>
-    <div class="links">
-      <a href="" @click="(e) => {e.preventDefault(); scrollTo('#presentation')}">Presentation</a>
-      <a href="" @click="(e) => {e.preventDefault(); scrollTo('#projects')}">Projects</a>
-    </div>
-    
-  </div>
-</template>
+<script>
+	import { onMount } from "svelte";
 
-<script lang="ts">
-import { ref } from 'vue';
-import { Ref } from 'vue';
-import { onMounted } from 'vue';
+    let scrollPosition = 0;
 
-export default {
-  setup() {
-    const scrollPosition: Ref<number> = ref(0);
-
-    onMounted(() => {
-      window.addEventListener('scroll', updateScroll);
-    });
-
-    const updateScroll = (): void => {
-      scrollPosition.value = window.scrollY;
+    const updateScroll = () => {
+      scrollPosition = window.scrollY;
     }
 
-    const scrollTo = (element: string) => {
+    const scrollTo = (element) => {
       document.querySelector(element)?.scrollIntoView({behavior: "smooth"});
     }
 
-    return {
-      scrollPosition,
-      scrollTo
-    }
-  }
-
-}
+    onMount(() => {
+        window.addEventListener('scroll', updateScroll);
+    })
 </script>
+
+
+<div class={scrollPosition > 50 ? 'Header change_color' : 'Header'}>
+    <div class="left">
+      <a href="" on:click|preventDefault={() => scrollTo('#welcome')}><img src="logo.png" alt=""></a>
+      <h1>ALEXIS | CS STUDENT</h1>
+    </div>
+    <div class="links">
+      <a href="" on:click|preventDefault={() => scrollTo('#presentation')}>Presentation</a>
+      <a href="" on:click|preventDefault={(e) => scrollTo('#projects')}>Projects</a>
+    </div>
+</div>
 
 <style lang="scss" scoped>
     @use "../styles/variables";

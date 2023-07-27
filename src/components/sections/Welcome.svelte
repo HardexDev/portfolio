@@ -1,40 +1,23 @@
-<template>
-  <div class="Welcome" id="welcome">
-      <Header />
-      <div class="main-bg">
-          <div class="title">
-              <typewriter
-                :replace="replace"
-                :type-interval="100"
-                :replace-interval="1000"
-              >
-                <h1>ALEXIS ROBIN</h1>
-            </typewriter> 
-          </div>
-      </div>
-      <img src="/assets/down-chevron.png" @click="scrollTo('#presentation')" alt="">
-  </div>
-</template>
+<script>
+    import Header from "../Header.svelte";
+    import {concurrent} from "svelte-typewriter";
 
-<script lang="ts">
-import Typewriter from 'typewriter-vue/src/components/Typewriter.vue';
-import Header from "../../components/Header.vue";
-
-export default {
-    components: {Header, Typewriter},
-    data: () => ({
-        replace: [
-            {from: "ALEXIS ROBIN", to: "CS STUDENT"},
-            {from: "CS STUDENT", to: "ALEXIS ROBIN"}
-        ]
-    }),
-    methods: {
-        scrollTo(element: string) {
-            document.querySelector(element)?.scrollIntoView({behavior: "smooth"});
-        }
+    const scrollTo = (element) => {
+        document.querySelector(element)?.scrollIntoView({behavior: "smooth"});
     }
-}
+
 </script>
+
+
+<div class="Welcome" id="welcome">
+    <Header />
+    <div class="main-bg">
+        <div class="title">
+              <h1 use:concurrent={{ interval: 120, keepCursorOnFinish: true, cursor: true }}>ALEXIS ROBIN | CS STUDENT</h1>
+        </div>
+    </div>
+    <img src="down-chevron.png" on:click={() => scrollTo('#presentation')} alt="">
+</div>
 
 <style lang="scss" scoped>
     @use "../../styles/variables";
@@ -66,7 +49,7 @@ export default {
             height: 100vh;
             width: 100%;
             height: 100%;
-            background-image: url("/assets/workspace.jpg");
+            background-image: url("workspace.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;

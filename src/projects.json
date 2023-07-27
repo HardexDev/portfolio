@@ -1,6 +1,28 @@
 [
     [
         {
+            "title": "NexCity",
+            "imageUrl": "nexcity.png",
+            "summary": "Project done for my semester project studying virtual worlds at UTBM. The goal was to create a Virtual Reality video-game in which you create your own smart city, that is to say an ecological and sustainable city, thanks several 3D objects that we added in the game.",
+            "language": "Unity 3D VR",
+            "frameworks": "No Framework",
+            "software": "Unity, Blender, Github",
+            "team": "4 students",
+            "year": "2023",
+            "githubLink": "https://github.com/HardexDev/NextCity"
+        },
+        {
+            "title": "Blender Living Room Modelisation",
+            "imageUrl": "blender.png",
+            "summary": "Project done for my 3D modelisation class. The goal was to recreate a realistic living room in 3D using the Blender modeling software. We were free in our creative choices",
+            "language": "3D",
+            "frameworks": "No Framework",
+            "software": "Blender",
+            "team": "Solo project",
+            "year": "2023",
+            "githubLink": ""
+        },
+        {
             "title": "Fluz",
             "imageUrl": "fluz.png",
             "summary": "Mobile application developed for SY43 UV at UTBM (android course). The goal was to create a \"zero budget app\" that is to say that total expenses must be equal to total income. Very nice project to develop Android skills. Agile project management was used.",
@@ -139,10 +161,10 @@
             "imageUrl": "logo.png",
             "summary": "The portfolio you are looking at right now !",
             "language": "JavaScript",
-            "frameworks": "VueJS, Sass",
+            "frameworks": "Svelte, Sass",
             "software": "Visual Studio Code, GitHub",
             "team": "Solo project",
-            "year": "2022",
+            "year": "2023",
             "githubLink": "https://github.com/HardexDev/portfolio"
         },
         {

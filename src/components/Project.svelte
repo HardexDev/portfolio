@@ -1,60 +1,49 @@
-<template>
-    <div class="Project">
-        <div :class="showSection ? 'card-header open' : 'card-header'" @click="toggleSection">
-            <img :src="'/assets/' + data.imageUrl" alt="">
-            <p>{{ data.title }} - {{ data.language }}</p>
-            <img :class="showSection ? 'up-arrow' : 'down-arrow'" :src="showSection ? '/assets/up-chevron-white.png' : '/assets/down-chevron-white.png'" alt="">
-        </div>
+<script>
+    // state
+    let showSection = false;
+    
+    // props
+    export let data;
 
-        <div class="card-content" v-show="showSection">
-            <p class="title bold">{{ data.title }}</p>
-            <p class="summary" v-html="data.summary"></p>
-            <div class="data">
-                <p><span>Proramming Language : </span> {{ data.language }}</p>
-                <p><span>Frameworks/Tools : </span> {{ data.frameworks }}</p>
-                <p><span>Software : </span>{{ data.software }}</p>
-                <p><span>Team : </span>{{ data.team }}</p>
-                <p><span>Year : </span>{{ data.year }}</p>
-            </div>
-            <button v-if="!isGithubLinkEmpty" @click="redirect"><img src="/assets/github.png" alt="">See on GitHub</button>
-            <h3 v-else>Code not available</h3>
-            
-        </div>
-    </div>
-</template>
-
-<script lang="ts">
-import { computed, Ref, ref } from '@vue/reactivity'
-export default {
-    setup(props) {
-        const showSection: Ref<boolean> = ref(false);
-
-        const toggleSection = () => {
-            showSection.value = !showSection.value;
-            console.log(showSection.value);
-        }
-
-        const redirect = () => {
-            window.open(props.data?.githubLink, '_blank');
-        }
-
-        const isGithubLinkEmpty = computed(() => {
-            console.log(props.data?.githubLink);
-            return props.data?.githubLink === "";
-        });
-
-        return {
-            showSection,
-            toggleSection,
-            redirect,
-            isGithubLinkEmpty
-        }
-    },
-    props: {
-        data: Object
+    // methods
+    const toggleSection = () => {
+        showSection = !showSection;
     }
-}
+
+    const redirect = () => {
+        window.open(data?.githubLink, '_blank');
+    }
+
+    const isGithubLinkEmpty = data?.githubLink === "";
 </script>
+
+<div class="Project">
+    <div class={showSection ? 'card-header open' : 'card-header'} on:click={() => toggleSection()}>
+        <img src={data.imageUrl} alt="">
+        <p>{data.title} - {data.language}</p>
+        <img class={showSection ? 'up-arrow' : 'down-arrow'} src={showSection ? 'up-chevron-white.png' : 'down-chevron-white.png'} alt="">
+    </div>
+
+    {#if showSection}
+        <div class="card-content">
+            <p class="title bold">{ data.title }</p>
+            <p class="summary">{data.summary}</p>
+            <div class="data">
+                <p><span>Proramming Language : </span> { data.language }</p>
+                <p><span>Frameworks/Tools : </span> { data.frameworks }</p>
+                <p><span>Software : </span>{ data.software }</p>
+                <p><span>Team : </span>{ data.team }</p>
+                <p><span>Year : </span>{ data.year }</p>
+            </div>
+            {#if !isGithubLinkEmpty}
+                <button on:click={() => redirect()}><img src="github.png" alt="">See on GitHub</button>
+            {:else}
+                <h3>Code not available</h3>
+            {/if}
+        </div>
+    {/if}
+    
+</div>
 
 <style lang="scss">
     @use "../styles/variables";
